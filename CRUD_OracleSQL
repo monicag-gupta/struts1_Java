@@ -1,0 +1,87 @@
+SQL*Plus: Release 19.0.0.0.0 - Production on Wed Oct 19 09:46:32 2022
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: monica
+Enter password:
+Last Successful login time: Tue Oct 18 2022 20:55:41 +05:30
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL> create table myEmp(empid int, ename varchar(26), esal int);
+
+Table created.
+
+
+SQL> insert into myEmp values(101,'A1',1000);
+
+1 row created.
+
+SQL> insert into myEmp values(102,'A2',2000);
+
+1 row created.
+
+SQL> insert into myEmp values(103,'A3',1500);
+
+1 row created.
+
+SQL> select * from myEmp;
+
+     EMPID ENAME                            ESAL
+---------- -------------------------- ----------
+       101 A1                               1000
+       102 A2                               2000
+       103 A3                               1500
+
+SQL> update myEmp set esal=1800 where empid=102;
+
+1 row updated.
+
+SQL> select * from myEmp;
+
+     EMPID ENAME                            ESAL
+---------- -------------------------- ----------
+       101 A1                               1000
+       102 A2                               1800
+       103 A3                               1500
+
+SQL> delete from myEmp where empid=102;
+
+1 row deleted.
+
+SQL> select * from myEmp;
+
+     EMPID ENAME                            ESAL
+---------- -------------------------- ----------
+       101 A1                               1000
+       103 A3                               1500
+
+SQL> insert into myEmp(empid,esal,ename) values(102,1200,'A2');
+
+1 row created.
+
+SQL> select * from myEmp;
+
+     EMPID ENAME                            ESAL
+---------- -------------------------- ----------
+       101 A1                               1000
+       103 A3                               1500
+       102 A2                               1200
+
+SQL> insert into myEmp(empid,esal) values(105,3000);
+
+1 row created.
+
+SQL> select * from myEmp;
+
+     EMPID ENAME                            ESAL
+---------- -------------------------- ----------
+       101 A1                               1000
+       103 A3                               1500
+       102 A2                               1200
+       105                                  3000
+
+SQL>
