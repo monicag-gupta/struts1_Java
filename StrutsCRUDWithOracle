@@ -1,4 +1,16 @@
  
+Note: 
+URL: localhost:1521:orcl
+Username: monica
+Password: gupta
+Create table LoginForm( userName varchar(10), password varchar(10));
+Insert into LoginForm values('A1','B1');
+Insert into LoginForm values('A2','B2');
+Insert into LoginForm values('A3','B3');
+Insert into LoginForm values('A4','B4');
+Insert into LoginForm values('A5','B5');
+
+select * from LoginForm;
 
  
 
