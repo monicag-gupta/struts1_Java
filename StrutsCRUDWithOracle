@@ -508,7 +508,8 @@ Added/Udated to the repo.
 <h2>
 
  <html:form action="/login">
-    <table>
+    <table border="1">
+    	<tr><th>UserName</th><th>Password</th></tr>
     	<logic:notEmpty name="listForm" property="logins">
            <logic:iterate name="listForm" id="listlogins" property="logins" type="common.form.LoginForm">               
                 <tr>
@@ -523,6 +524,7 @@ Added/Udated to the repo.
     </h2>
 </body>
 </html>
+
 
 
 
