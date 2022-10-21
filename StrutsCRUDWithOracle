@@ -1,6 +1,6 @@
- 
+
 Note: 
-URL: localhost:1521:orcl
+URL: jdbc:oracle:thin:@192.168.15.38:1521:dev11a", "scrmhsil", "scrmhsil
 Username: monica
 Password: gupta
 Create table LoginForm( userName varchar(10), password varchar(10));
